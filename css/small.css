@@ -1,0 +1,163 @@
+    /* ---------------------- COLOR SCHEME ------------------- */
+    /*
+    lightgrey= #bababa
+    darkgrey=  #8d8d8d
+    lightblue= #a6cbeb
+    blue=      #4c96d7
+    black=     #3a3a3a
+    white=     #ffffff
+    */
+    /*----------------------- FONTS --------------------------*/
+    /*
+    font-family: 'Orbitron', sans-serif;        --- nav
+    font-family: 'Gemunu Libre', sans-serif;    --- footer
+    font-family: 'Audiowide', cursive;          --- titles
+    */
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    body {
+        background-color: #ffffff;
+    }
+
+    header {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        padding-bottom: 1em;
+        background-color: #ffffff;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #myaccount {
+        padding-right: 3em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+        font-weight: 900;
+        text-decoration: none;
+        color: #8d8d8d;
+    }
+
+    .navigation {
+        background-color: #3a3a3a;
+    }
+
+    .navigation li {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.3em;
+    }
+
+    .navigation li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 600;
+        font-size: small;
+    }
+
+    .navigation .active {
+        background-color: #4c96d7;
+        color: #3a3a3a;
+        padding: 1.2em;
+    }
+
+    h1 {
+
+        padding: 0.5em 0;
+        font-family: 'Audiowide', cursive;
+        color: #3a3a3a;
+    }
+
+    .footerline {
+        width: 100%;
+        height: 5px;
+        background-color: #3a3a3a;
+    }
+
+    footer p {
+        padding: 1em 0;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: small;
+        font-weight: 900;
+        text-align: center;
+        color: #3a3a3a;
+    }
+
+    /*------------------------ HOME PAGE -----------------*/
+    .offersection {
+        padding: 0.5em 0.5em;
+    }
+
+    .offersection h1 {
+        font-size: 1.4em;
+    }
+
+    .offer {
+        color: #4c96d7;
+        font-family: 'Audiowide', cursive;
+    }
+
+    .offer img {
+        width: 100%;
+    }
+
+    .offer input {
+        width: 50%;
+        margin: 1em 25%
+    }
+
+    .flex-offer {
+        display: flex;
+    }
+
+    .flex-offer-item {
+        display: flex;
+        height: 100%;
+    }
+
+    .upgradeReview {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .reviews h2 {
+        padding-left: 0.5em;
+    }
+
+    .reviews ul {
+        padding-left: 2em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-weight: bold;
+        color: #8d8d8d;
+        padding-bottom: 1em;
+    }
+
+    .upgrades h2 {
+        padding: 0 0.5em 0.5em;
+
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex-container .flex-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex-padding {
+        padding-bottom: 1em;
+    }
+
+    .flex-container .flex-item img {
+        background-color: #4c96d7;
+        width: 100%;
+        padding: 1em 2em;
+        border: 1px solid #3a3a3a;
+    }

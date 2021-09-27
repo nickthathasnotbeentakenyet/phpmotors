@@ -1,0 +1,85 @@
+@media only screen and (min-width:70em) {
+    .navigation li {
+        padding: 1em;
+    }
+
+    .navigation li a {
+        font-size: large;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    footer p {
+        font-size: large;
+    }
+
+    .offersection h1 {
+        font-size: 2.5em;
+    }
+
+    .offer {
+        padding-left: 2em;
+        font-size: x-large;
+    }
+
+    .offer img {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .offer input {
+        position: absolute;
+        top: 60%;
+        margin: 0;
+        width: 18%;
+    }
+
+
+
+    .upgradeReview {
+        margin: 2em;
+        display: flex;
+        flex-flow: row;
+        text-align: left;
+    }
+
+    .upgradeReview div {
+        width: 50%;
+    }
+
+    .upgradeReview h2 {
+        margin-bottom: 1em;
+        font-family: 'Audiowide', cursive;
+        font-size: xx-large;
+        color: #3a3a3a;
+    }
+
+    .reviews li {
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: larger;
+        font-weight: bold;
+        color: #8d8d8d;
+        padding-bottom: 1em;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flex-container .flex-item {
+        padding: 0 1em;
+    }
+
+    .flex-padding {
+        padding-bottom: 1em;
+    }
+
+    .flex-container .flex-item img {
+        background-color: #4c96d7;
+        padding: 1em 2em;
+        border: 2px solid #3a3a3a;
+    }
+}
