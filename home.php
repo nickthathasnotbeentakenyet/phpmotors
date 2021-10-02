@@ -21,20 +21,8 @@
 </head>
 
 <body>
-    <header>
-        <img src="/phpmotors/images/site/logo.png" alt="Delorian logo">
-        <a href="#" id="myaccount"> My Account</a>
-    </header>
-    <nav>
-        <ul class="navigation">
-            <li><a href="#" title="home">Home</a></li>
-            <li><a href="#" title="classic">Classic</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">SUV</a></li>
-            <li><a href="#">Trucks</a></li>
-            <li><a href="#">Used</a></li>
-        </ul>
-    </nav>
+    <?php include ("header.php")?>
+    <?php include ("nav.php")?>
     <main>
         <section class="offersection">
             <h1>Welcome to PHP Motors !</h1>
@@ -91,15 +79,7 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footerline"></div>
-        <p>
-            @ PHP Motors, All rights reserved.<br>
-            All images used are believe to be in "Fair Use." Please notify the author if any are not and they will be
-            removed.<br>
-            Last Updated: 30 March, 2018
-        </p>
-    </footer>
+    <?php include ("footer.php") ?>  
 </body>
 
 </html>

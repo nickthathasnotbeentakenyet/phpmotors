@@ -77,13 +77,12 @@
         height: 5px;
         background-color: #3a3a3a;
     }
-
-    footer p {
+    footer {
         padding: 1em 0;
+        text-align: center;
         font-family: 'Gemunu Libre', sans-serif;
         font-size: small;
         font-weight: 900;
-        text-align: center;
         color: #3a3a3a;
     }
 
@@ -160,4 +159,15 @@
         width: 100%;
         padding: 1em 2em;
         border: 1px solid #3a3a3a;
+    }
+
+    /* error page */
+
+    .error500 h1{
+        padding-left: 1em;
+    }
+    .error500 p{
+        padding-left: 1em;
+        font-size: large;
+        padding-bottom: 1em;
     }
