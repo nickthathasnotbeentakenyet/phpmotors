@@ -1,11 +1,23 @@
 @media only screen and (min-width:70em) {
-    .navigation li {
-        padding: 1em;
+    nav li {
+        flex-direction: row;
+		flex: 1 1 auto;
+        padding: 1em 0;
     }
 
-    .navigation li a {
+    nav li a {
+        padding: 0.9em 0.5em;
         font-size: large;
     }
+    nav a:hover {
+		color: #3a3a3a;
+		background-color: #4c96d7;
+	}
+
+	nav .active {
+		color: #3a3a3a;
+		background-color: #4c96d7;
+	}
 
     h1 {
         font-size: x-large;
@@ -82,4 +94,28 @@
         padding: 1em 2em;
         border: 2px solid #3a3a3a;
     }
+    .login-page h1{
+        font-size: xx-large;
+    }
+    .login-form label{
+        font-size: larger;
+    }
+    .login-form input{
+        font-size: larger;
+        width: 20%;
+    }
+    .login-submit{
+        font-size: 1.5em;
+    }
+    .login-page p{
+        font-size: 1.2em;
+    }
+    .login-page button{
+        font-size: 1.3em;
+        margin-top: 0.2em;
+    }
+    .login-page a{
+        font-size: 1.2em;
+    }
+    
 }

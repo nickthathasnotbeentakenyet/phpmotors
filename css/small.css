@@ -38,28 +38,29 @@
         font-size: large;
         font-weight: 900;
         text-decoration: none;
-        color: #8d8d8d;
+        color: #3a3a3a;
     }
 
-    .navigation {
+    nav {
         background-color: #3a3a3a;
     }
 
-    .navigation li {
+    nav li {
         display: inline-block;
         text-decoration: none;
         padding: 0.3em;
     }
 
-    .navigation li a {
+    nav li a {
         text-decoration: none;
         color: #ffffff;
         font-family: 'Orbitron', sans-serif;
         font-weight: 600;
         font-size: small;
+        background-color: #3a3a3a;
     }
 
-    .navigation .active {
+    nav .active {
         background-color: #4c96d7;
         color: #3a3a3a;
         padding: 1.2em;
@@ -170,4 +171,65 @@
         padding-left: 1em;
         font-size: large;
         padding-bottom: 1em;
+    }
+
+    /* ---------------------- LOGIN PAGE --------------------- */
+
+    .login-page {
+        margin-left: 1em;
+    }
+    .login-form label {
+        color: #3a3a3a;
+        font-size: 1em;
+        font-family:'Audiowide', cursive;
+    }
+    .login-form input{
+        color: #3a3a3a;
+        padding: 0.2em 0.5em;
+        border: #3a3a3a 2px solid;
+    }
+    .login-submit{
+        background-color: #4c96d7;
+        color: #3a3a3a;
+        font-family:'Orbitron', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 0.3em 0.7em;
+        margin-top: 0.5em;
+        border: #3a3a3a 2px solid;
+    }
+    .login-submit:hover {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: #4c96d7 2px solid;
+    }
+    .login-page p{
+        margin-top: 1em;
+        font-family:'Audiowide', cursive;
+        color: #3a3a3a;
+    }
+    .login-page button{
+        font-family:'Orbitron', sans-serif;
+        font-size: 0.9em;
+        background-color: #3a3a3a;
+        color: #ffffff;
+        padding: 0.3em 0.7em;
+        border: #4c96d7 2px solid;
+    }
+    .login-page button:hover{
+        background-color: #4c96d7;
+        color: #3a3a3a;
+        font-weight: 900;
+        border: #3a3a3a 2px solid;
+    }
+    .login-page a{
+        font-family: 'Audiowide', cursive;
+        font-size: 0.9em;
+        color: #3a3a3a;
+    }
+    .login-page a:hover{
+        color: #4c96d7;
+    }
+    .register-button{
+        margin-top: 0.5em;
     }

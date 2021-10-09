@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Motors | Home</title>
+    <title>Home | PHP Motors</title>
     <link rel="stylesheet" href="css/small.css" type="text/css">
     <link rel="stylesheet" href="css/large.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +21,13 @@
 </head>
 
 <body>
-    <?php include ("header.php")?>
-    <?php include ("nav.php")?>
+    <header id="page-header">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
+    </header>
+    <nav id="page_nav">
+    <?php echo $navList; ?>
+    <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?>  -->
+    </nav>
     <main>
         <section class="offersection">
             <h1>Welcome to PHP Motors !</h1>
@@ -79,7 +84,9 @@
             </div>
         </section>
     </main>
-    <?php include ("footer.php") ?>  
+    <footer id="page-footer">
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>
+    </footer>
 </body>
 
 </html>
