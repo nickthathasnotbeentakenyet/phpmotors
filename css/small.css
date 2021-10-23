@@ -78,6 +78,7 @@
         height: 5px;
         background-color: #3a3a3a;
     }
+
     footer {
         padding: 1em 0;
         text-align: center;
@@ -164,10 +165,11 @@
 
     /* error page */
 
-    .error500 h1{
+    .error500 h1 {
         padding-left: 1em;
     }
-    .error500 p{
+
+    .error500 p {
         padding-left: 1em;
         font-size: large;
         padding-bottom: 1em;
@@ -178,58 +180,195 @@
     .login-page {
         margin-left: 1em;
     }
+
     .login-form label {
         color: #3a3a3a;
         font-size: 1em;
-        font-family:'Audiowide', cursive;
+        font-family: 'Audiowide', cursive;
     }
-    .login-form input{
+
+    .login-form input {
         color: #3a3a3a;
         padding: 0.2em 0.5em;
         border: #3a3a3a 2px solid;
     }
-    .login-submit{
+
+    .login-submit {
         background-color: #4c96d7;
         color: #3a3a3a;
-        font-family:'Orbitron', sans-serif;
+        font-family: 'Orbitron', sans-serif;
         font-size: 1.2em;
         font-weight: bold;
         padding: 0.3em 0.7em;
         margin-top: 0.5em;
         border: #3a3a3a 2px solid;
     }
+
     .login-submit:hover {
         background-color: #3a3a3a;
         color: #ffffff;
         border: #4c96d7 2px solid;
     }
-    .login-page p{
+
+    .login-page p {
         margin-top: 1em;
-        font-family:'Audiowide', cursive;
+        font-family: 'Audiowide', cursive;
         color: #3a3a3a;
     }
-    .login-page button{
-        font-family:'Orbitron', sans-serif;
+
+    .login-page button {
+        font-family: 'Orbitron', sans-serif;
         font-size: 0.9em;
         background-color: #3a3a3a;
         color: #ffffff;
         padding: 0.3em 0.7em;
         border: #4c96d7 2px solid;
     }
-    .login-page button:hover{
+
+    .login-page button:hover {
         background-color: #4c96d7;
         color: #3a3a3a;
         font-weight: 900;
         border: #3a3a3a 2px solid;
     }
-    .login-page a{
+
+    .login-page a {
         font-family: 'Audiowide', cursive;
         font-size: 0.9em;
         color: #3a3a3a;
     }
-    .login-page a:hover{
+
+    .login-page a:hover {
         color: #4c96d7;
     }
-    .register-button{
+
+    .register-button {
         margin-top: 0.5em;
+    }
+
+    #reg {
+        background-color: #4c96d7;
+        color: #3a3a3a;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 0.3em 0.7em;
+        margin-top: 0.5em;
+        border: #3a3a3a 2px solid;
+        box-sizing: content-box;
+    }
+
+    #reg:hover {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: #4c96d7 2px solid;
+    }
+
+    #msgEmptyField,
+    #msgUnregistered {
+        color: crimson;
+        margin-bottom: 1em;
+    }
+
+    #msgRegistered {
+        color: #1abc9c;
+        margin-bottom: 1em;
+    }
+
+    .msgName {
+        color: #4c96d7;
+        font-size: larger;
+    }
+
+    .vehicleManHeading {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .vehicleMan {
+        text-align: center;
+        border: #8d8d8d 2px solid;
+        box-shadow: #8d8d8d 0 5px 5px;
+        margin: 0 15%;
+        border-radius: 5px;
+    }
+
+    .vehicleMan a {
+        display: inline-block;
+        border: #8d8d8d 2px solid;
+        text-decoration: none;
+        color: #3a3a3a;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 600;
+        margin: 0.5em 0;
+        padding: 0.3em 1.2em;
+        background-color: #dfdfdf;
+        border-radius: 5px;
+    }
+
+    .vehicleMan a:hover {
+        background-color: #4c96d7;
+    }
+
+    .vehicleMan textarea {
+        height: 2em;
+        width: 14em;
+    }
+
+    .addClassification input {
+        color: #8d8d8d;
+        padding: 0.2em 0.5em;
+        margin: 0.2em 1.2em;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .addClassification label {
+        text-align: center;
+        color: #3a3a3a;
+        font-size: 1em;
+        font-family: 'Audiowide', cursive;
+    }
+
+    #addClassification,
+    #addVehicle {
+        background-color: #4c96d7;
+        color: #ffffff;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    #addClassification:hover,
+    #addVehicle:hover {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: #4c96d7 2px solid;
+    }
+
+    #emptyAddClass {
+        color: crimson;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .vehicleSelect {
+        margin: 0.5em auto 0.5em;
+        width: 12em;
+        font-size: medium;
+        text-align: center;
+        padding: 0.3em 0.8em;
+    }
+
+    #msgNewVehicle {
+        font-size: large;
+        color: #1abc9c;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    #invImage,
+    #invThumbnail {
+        color: #3a3a3a;
     }

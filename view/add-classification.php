@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Login | PHP Motors</title>
+    <title>Add Classification | PHP Motors</title>
     <link rel="stylesheet" href="/phpmotors/css/small.css" type="text/css">
     <link rel="stylesheet" href="/phpmotors/css/large.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Gemunu+Libre:wght@300&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/phpmotors/images/site/logo.png" type="image/x-icon">    
+    <link rel="shortcut icon" href="/phpmotors/images/site/logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -28,22 +28,22 @@
         <?php echo $navList; ?>
         <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?> -->
     </nav>
-    <main class="login-page">
-        <h1>Sign in</h1>
+    <main>
+        <h1 class="vehicleManHeading">Add Classification</h1>
         <?php
             if (isset($message)) {
             echo $message;
             }
         ?>
-        <form action="/phpmotors/accounts/index.php" method="post" class="login-form">
-            <label for="clientEmail">Email</label><br>
-            <input name="clientEmail" id="clientEmail" type="email" placeholder="example@domain.com"><br>
-            <label for="clientPassword">Password</label><br>
-            <input name="clientPassword" id="clientPassword" type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
-            <input type="submit" name="submit" class="login-submit" value="Sing-in">
-        </form>
-        <p>Not a member yet?</p>
-        <button type="button" name="register" class="register-button" onclick="location.href='/phpmotors/accounts/index.php?action=registerstration'">Register</button>     
+        <div class="vehicleMan">
+            <form action="/phpmotors/vehicles/index.php" method="post" class="addClassification">
+                <label for="classificationName">Classification Name</label><br>
+                <input type="text" name="classificationName" id="classificationName"
+                    placeholder="classification name"><br>
+                <input type="submit" name="submit" id="addClassification" value="Add Classification">
+                <input type="hidden" name="action" value="addClassification">
+            </form>
+        </div>
     </main>
     <footer id="page-footer">
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>

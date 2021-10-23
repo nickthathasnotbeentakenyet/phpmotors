@@ -30,17 +30,23 @@
     </nav>
     <main class="login-page">
         <h1>Register</h1>
-        <form class="login-form">
+        <?php
+            if (isset($message)) {
+            echo $message;
+            }
+        ?>
+        <form class="login-form" action="/phpmotors/accounts/index.php" method="post">
             <label for="clientFirstname">First name</label><br>
-            <input name="clientFirstname" id="clientFirstname" type="text" required placeholder="Jake"><br>
+            <input type="text" name="clientFirstname" id="clientFirstname" placeholder="Jake"><br>
             <label for="clientLastname">Last name</label><br>
-            <input name="clientLastname" id="clientLastname" type="text" required placeholder="Tompson"><br>
+            <input type="text" name="clientLastname" id="clientLastname" placeholder="Tompson"><br>
             <label for="clientEmail">Email</label><br>
-            <input name="clientEmail" id="clientEmail" type="email" required placeholder="example@domain.com"><br>
+            <input type="email" name="clientEmail" id="clientEmail" placeholder="example@domain.com"><br>
             <label for="clientPassword">Password</label><br>
-            <input name="clientPassword" id="clientPassword" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+            <input type="password" name="clientPassword" id="clientPassword" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br>
+            <input type="submit" name="submit" id="reg" value="Register">
+            <input type="hidden" name="action" value="register">
         </form>
-        <button type="button" name="register" class="register-button">Register</button>
         <br>
         <br>
         <a href="/phpmotors/accounts/index.php?action=login">Login page</a>             

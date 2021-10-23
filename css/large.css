@@ -1,7 +1,19 @@
 @media only screen and (min-width:70em) {
+    html {
+        background-image: url(/phpmotors/images/site/checkerboard.jpg);
+        background-size: 40%;
+    }
+
+    body {
+        width: 90%;
+        height: 90%;
+        margin: 5%;
+
+    }
+
     nav li {
         flex-direction: row;
-		flex: 1 1 auto;
+        flex: 1 1 auto;
         padding: 1em 0;
     }
 
@@ -9,15 +21,16 @@
         padding: 0.9em 0.5em;
         font-size: large;
     }
-    nav a:hover {
-		color: #3a3a3a;
-		background-color: #4c96d7;
-	}
 
-	nav .active {
-		color: #3a3a3a;
-		background-color: #4c96d7;
-	}
+    nav a:hover {
+        color: #3a3a3a;
+        background-color: #4c96d7;
+    }
+
+    nav .active {
+        color: #3a3a3a;
+        background-color: #4c96d7;
+    }
 
     h1 {
         font-size: x-large;
@@ -43,12 +56,10 @@
 
     .offer input {
         position: absolute;
-        top: 60%;
+        top: 70%;
         margin: 0;
         width: 18%;
     }
-
-
 
     .upgradeReview {
         margin: 2em;
@@ -94,28 +105,80 @@
         padding: 1em 2em;
         border: 2px solid #3a3a3a;
     }
-    .login-page h1{
+
+    .login-page h1 {
         font-size: xx-large;
     }
-    .login-form label{
+
+    .login-form label {
         font-size: larger;
     }
-    .login-form input{
+
+    .login-form input {
         font-size: larger;
         width: 20%;
     }
-    .login-submit{
-        font-size: 1.5em;
+
+    .login-form .login-submit {
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 0.3em 0.45em;
+        box-sizing: content-box;
     }
-    .login-page p{
+
+    .login-page p {
         font-size: 1.2em;
     }
-    .login-page button{
+
+    .login-page button {
         font-size: 1.3em;
         margin-top: 0.2em;
     }
-    .login-page a{
-        font-size: 1.2em;
+
+    .login-page a {
+        font-size: 1.4em;
     }
-    
+
+    #reg {
+        font-size: 1.3em;
+        padding: 0.2em 0.45em;
+        box-sizing: content-box;
+    }
+
+    .vehicleManHeading {
+        margin: 0 30%;
+        font-size: x-large;
+    }
+
+    .vehicleMan {
+        margin: 0 30%;
+    }
+
+    .vehicleMan a {
+        font-size: large;
+    }
+
+    .addClassification input {
+        font-size: 1.3em;
+    }
+
+    #addClassification,
+    #addVehicle {
+        padding: 0.4em 1em;
+        font-size: 1.3em;
+    }
+
+    #emptyAddClass {
+        font-size: large;
+    }
+
+    .vehicleMan textarea {
+        height: 3em;
+        width: 18.5em;
+    }
+
+    .vehicleSelect {
+        width: 14em;
+        font-size: large;
+    }
 }
