@@ -25,8 +25,9 @@
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav">
-    <?php echo $navList; ?>
+    <!-- <?php echo $navList; ?> -->
     <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?>  -->
+    <?php echo getNavigationBar($carclassification); ?>
     </nav>
     <main>
         <section class="offersection">

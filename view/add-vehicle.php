@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+    // Build a select drop-down menu using the $classifications array
+    $classificationList = "<br><label for='classificationId'>Select Classification</label><br>";
+    $classificationList .= "<select name='classificationId' id='classificationId' class='vehicleSelect' required>";
+    $classificationList .= "<option value='' disabled selected>Not selected</option>";
+    foreach ($classifications as $classification) {
+        $classificationList .= "<option  value='$classification[classificationId]'";
+        if (isset($classificationId)) {
+            if ($classification['classificationId'] === $classificationId) {
+                $classificationList .= ' selected ';
+            }
+        }
+        $classificationList .= ">$classification[classificationName]</option>";
+    }
+    $classificationList .= '</select>';
+
+?><!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -25,7 +41,8 @@
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav">
-        <?php echo $navList; ?>
+        <!-- <?php echo $navList; ?> -->
+        <?php echo getNavigationBar($carclassification); ?>
         <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?> -->
     </nav>
     <main>
@@ -39,23 +56,23 @@
             <form action="/phpmotors/vehicles/index.php" method="post" class="addClassification">
                 <?php echo $classificationList; ?><br>
                 <label for="invMake">Make</label><br>
-                <input type="text" name="invMake" id="invMake" placeholder="make"><br>
+                <input type="text" name="invMake" id="invMake" <?php if(isset($invMake)){echo "value='$invMake'";}  ?> required placeholder="make"><br>
                 <label for="invModel">Model</label><br>
-                <input type="text" name="invModel" id="invModel" placeholder="model"><br>
+                <input type="text" name="invModel" id="invModel" <?php if(isset($invModel)){echo "value='$invModel'";}  ?> required placeholder="model"><br>
                 <label for="invDescription">Description</label><br>
-                <textarea name="invDescription" id="invDescription"></textarea><br>
+                <textarea name="invDescription" id="invDescription" required><?php if(isset($invDescription)){echo $invDescription;}  ?></textarea><br>
                 <label for="invImage">Image</label><br>
-                <input type="text" name="invImage" id="invImage" value="/images/no-image.png"
+                <input type="text" name="invImage" id="invImage" <?php if(isset($invImage)){echo "value='$invImage'";}  ?> required value="/images/no-image.png"
                     placeholder="/images/no-image.png"><br>
                 <label for="invThumbnail">Thumbnail</label><br>
-                <input type="text" name="invThumbnail" id="invThumbnail" value="/images/no-image.png"
+                <input type="text" name="invThumbnail" id="invThumbnail" <?php if(isset($invThumbnail)){echo "value='$invThumbnail'";}  ?> required value="/images/no-image.png"
                     placeholder="/images/no-image.png"><br>
                 <label for="invPrice">Price</label><br>
-                <input type="text" name="invPrice" id="invPrice" placeholder="$20000"><br>
+                <input type="text" name="invPrice" id="invPrice" <?php if(isset($invPrice)){echo "value='$invPrice'";}  ?> required pattern="^\W?(\d+(\.\d{0,2})?|\.?\d{1,2})$" placeholder="$20000"><br>
                 <label for="invStock">Stock</label><br>
-                <input type="text" name="invStock" id="invStock" placeholder="3"><br>
+                <input type="text" name="invStock" id="invStock" <?php if(isset($invStock)){echo "value='$invStock'";}  ?> required pattern="^\d+$" placeholder="3"><br>
                 <label for="invColor">Color</label><br>
-                <input type="text" name="invColor" id="invColor" placeholder="pink"><br>
+                <input type="text" name="invColor" id="invColor" <?php if(isset($invColor)){echo "value='$invColor'";}  ?> required pattern="^[a-zA-Z]{1,}\W?\w*$" placeholder="pink"><br>
                 <input type="submit" name="submit" id="addVehicle" value="Add Vehicle">
                 <input type="hidden" name="action" value="addVehicle">
             </form>

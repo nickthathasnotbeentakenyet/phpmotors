@@ -181,4 +181,8 @@
         width: 14em;
         font-size: large;
     }
+    .hint{
+        font-size: larger;
+        font-weight: 700;
+    }
 }

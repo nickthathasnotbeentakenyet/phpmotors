@@ -25,8 +25,9 @@
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav">
-        <?php echo $navList; ?>
+        <!-- <?php echo $navList; ?> -->
         <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?> -->
+        <?php echo getNavigationBar($carclassification); ?>
     </nav>
     <main>
         <h1 class="vehicleManHeading">Add Classification</h1>
@@ -38,8 +39,8 @@
         <div class="vehicleMan">
             <form action="/phpmotors/vehicles/index.php" method="post" class="addClassification">
                 <label for="classificationName">Classification Name</label><br>
-                <input type="text" name="classificationName" id="classificationName"
-                    placeholder="classification name"><br>
+                <span class="hint">Please keep it limited up to 30 characters</span><br>
+                <input type="text" name="classificationName" id="classificationName" required pattern="[a-zA-Z]{1,30}" placeholder="classification name"><br>
                 <input type="submit" name="submit" id="addClassification" value="Add Classification">
                 <input type="hidden" name="action" value="addClassification">
             </form>

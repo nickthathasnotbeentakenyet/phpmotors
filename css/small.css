@@ -372,3 +372,30 @@
     #invThumbnail {
         color: #3a3a3a;
     }
+    .hint{
+        color: #4c96d7;
+    }
+
+    input:required:invalid, input:focus:invalid{
+        background-color: #ffe2e3 ;
+    }
+
+    input:focus:valid {
+        background-color: lightskyblue;
+        color: #3a3a3a;
+    }
+    textarea:required:invalid, textarea:focus:invalid{
+        background-color: #ffe2e3 ;
+    }
+    textarea:focus:valid{
+        background-color: lightskyblue;
+        color: #3a3a3a;
+        font-size: large;
+        font-weight: 800;
+    }
+    select:invalid{
+        background-color: #ffe2e3;
+    }
+    select:valid{
+        background-color: #ffffff;
+    }
