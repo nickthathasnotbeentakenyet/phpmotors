@@ -26,21 +26,43 @@
         display: flex;
         flex-flow: row;
         align-items: center;
-        padding-bottom: 1em;
         background-color: #ffffff;
         width: 100%;
         justify-content: space-between;
     }
-
     #myaccount {
-        padding-right: 3em;
+        margin-right: 1em;
         font-family: 'Gemunu Libre', sans-serif;
         font-size: large;
         font-weight: 900;
         text-decoration: none;
         color: #3a3a3a;
     }
-
+    #myaccount:hover{
+        color: #4c96d7;
+    }
+    #welcomeMessage{
+        color: #3a3a3a;
+        text-decoration: none;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: larger;
+        font-weight: 900;
+        margin-right: 1em;
+        /* color: #1abc9c; */
+    }
+    #welcomeMessage:hover{
+        color: #4c96d7;
+    }
+    #logout{
+        color: #3a3a3a;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+        font-weight: 900;
+        margin-right: 1em;
+    }
+    #logout:hover{
+        color: crimson;
+    }
     nav {
         background-color: #3a3a3a;
     }
@@ -398,4 +420,25 @@
     }
     select:valid{
         background-color: #ffffff;
+    }
+    .admin-view h1{
+        font-size:1.2em;
+    }
+    .admin-view{
+        margin-left: 3em;
+    }
+    .admin-view li{
+        list-style-type: none;
+        font-family: 'Gemunu Libre', sans-serif; 
+        font-size: larger;
+    }
+    #admin-link{
+        text-decoration: none;
+        color: #3a3a3a;
+        font-family: 'Gemunu Libre', sans-serif;    
+        font-size: larger;
+        font-weight: 700;
+    }
+    #admin-link:hover{
+        color: #4c96d7;
     }

@@ -14,6 +14,11 @@
     }
     $classificationList .= '</select>';
 
+?>
+<?php 
+if(!$_SESSION['loggedin'] || $_SESSION['clientData']['clientLevel'] == 1){
+    header('Location: /phpmotors/');
+   }
 ?><!DOCTYPE html>
 <html lang="en-us">
 

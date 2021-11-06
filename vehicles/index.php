@@ -5,6 +5,12 @@
 * -------------------------------
 */
 
+// start ------------------------------------------------
+// Create or access a Session
+session_start();
+// end --------------------------------------------------
+
+
 // Get the database connection file
 require_once '../library/connections.php';
 // Get the PHP Motors model for use as needed
