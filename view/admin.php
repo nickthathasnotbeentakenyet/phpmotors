@@ -29,21 +29,24 @@ if(!$_SESSION['loggedin']){
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
     </header>
     <nav id="page_nav">
-        <!-- <?php echo $navList; ?> -->
-        <!-- <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/nav.php'; ?> -->
         <?php echo getNavigationBar($carclassification); ?>
     </nav>
     <main class="admin-view">
-        <!-- test -->
         <h1>Logged in as <?php echo $_SESSION['clientData']['clientFirstname']; echo" "; echo $_SESSION['clientData']['clientLastname']; ?></h1>
+        <?php if (isset($_SESSION['message'])) {
+            echo $_SESSION['message'];
+           } ?>
         <ul>
             <li>First name: <?php echo $_SESSION['clientData']['clientFirstname']; ?></li>
             <li>Last name: <?php echo $_SESSION['clientData']['clientLastname']; ?></li>
             <li>Email: <?php echo $_SESSION['clientData']['clientEmail']; ?></li>
         </ul>
         <br>
-        <?php if($_SESSION['clientData']['clientLevel'] > 1){ echo '<a id="admin-link" href="/phpmotors/vehicles/">Manage vehicles</a>'; }?>
-        <!-- end test -->
+        <h2>Account Management</h2>
+        <a class="admin-link" href="/phpmotors/accounts/?action=updateAccount">Update account information</a>
+        <br>
+        <?php if($_SESSION['clientData']['clientLevel'] > 1)
+        {echo '<h2>Inventory Management</h2>'; echo '<p>Use the following link to manage inventory</p>'; echo '<a class="admin-link" href="/phpmotors/vehicles/">Manage vehicles</a>'; }?>
     </main>
     <footer id="page-footer">
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>

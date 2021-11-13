@@ -268,7 +268,7 @@
         margin-top: 0.5em;
     }
 
-    #reg {
+    #reg, .reg {
         background-color: #4c96d7;
         color: #3a3a3a;
         font-family: 'Orbitron', sans-serif;
@@ -280,7 +280,7 @@
         box-sizing: content-box;
     }
 
-    #reg:hover {
+    #reg:hover, .reg:hover {
         background-color: #3a3a3a;
         color: #ffffff;
         border: #4c96d7 2px solid;
@@ -396,6 +396,7 @@
     }
     .hint{
         color: #4c96d7;
+        font-family: 'Gemunu Libre', sans-serif;
     }
 
     input:required:invalid, input:focus:invalid{
@@ -432,13 +433,67 @@
         font-family: 'Gemunu Libre', sans-serif; 
         font-size: larger;
     }
-    #admin-link{
+    .admin-link{
         text-decoration: none;
         color: #3a3a3a;
         font-family: 'Gemunu Libre', sans-serif;    
         font-size: larger;
         font-weight: 700;
     }
-    #admin-link:hover{
+    .admin-link:hover{
         color: #4c96d7;
+    }
+    .clientUpdate{
+        margin-left: 2em;
+    }
+    .clientUpdate h2{
+        padding: 0.5em 0;
+        font-family: 'Audiowide', cursive;
+        color: #4c96d7;
+    }
+    #clientupdateWarning{
+        margin: 0;
+        color: crimson;
+        font-family: 'Gemunu Libre', sans-serif;
+    }
+    .admin-view h2{
+        font-family: 'Audiowide', cursive;
+        /* color: #1abc9c;
+        text-shadow: #3a3a3a 1px 1px;
+        font-size: 1.6em; */
+        color: #3a3a3a;
+        font-size: 1.3em;
+        font-weight: 900;
+    }
+    .admin-view h2:last-of-type{
+        margin-top: 1em;
+    }
+    .veh-man-update{
+        text-align: center;
+        margin-top: 1em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+    .veh-man-updateH2{
+        font-size: 1.3em;
+    }
+    #inventoryDisplay{
+        margin: auto;
+        margin-top: 1em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: 1.3em;
+        color: #3a3a3a;
+        font-weight: 800;
+        color:#1abc9c;
+    }
+    #invD{
+        text-align: left;
+        color: #3a3a3a;
+    }
+    #invDbody{
+        margin-left: 1em;
+    }
+    #invDbody:hover{
+        color: crimson;
     }

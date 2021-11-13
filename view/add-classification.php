@@ -1,6 +1,7 @@
 <?php 
 if(!$_SESSION['loggedin'] || $_SESSION['clientData']['clientLevel'] == 1){
     header('Location: /phpmotors/');
+    exit;
    }
 ?><!DOCTYPE html>
 <html lang="en-us">
