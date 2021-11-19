@@ -22,8 +22,7 @@ if(!$_SESSION['loggedin'] || $_SESSION['clientData']['clientLevel'] == 1){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Gemunu+Libre:wght@300&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="/phpmotors/images/site/logo.png" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="/phpmotors/images/site/tab-icon.png" type="image/x-icon"></head>
 
 <body>
     <header id="page-header">

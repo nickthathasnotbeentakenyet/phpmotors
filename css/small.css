@@ -13,9 +13,20 @@
     font-family: 'Gemunu Libre', sans-serif;    --- footer
     font-family: 'Audiowide', cursive;          --- titles
     */
+
     * {
         padding: 0%;
         margin: 0%;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    html {
+        box-sizing: border-box;
     }
 
     body {
@@ -30,6 +41,7 @@
         width: 100%;
         justify-content: space-between;
     }
+
     #myaccount {
         margin-right: 1em;
         font-family: 'Gemunu Libre', sans-serif;
@@ -38,10 +50,12 @@
         text-decoration: none;
         color: #3a3a3a;
     }
-    #myaccount:hover{
+
+    #myaccount:hover {
         color: #4c96d7;
     }
-    #welcomeMessage{
+
+    #welcomeMessage {
         color: #3a3a3a;
         text-decoration: none;
         font-family: 'Gemunu Libre', sans-serif;
@@ -50,19 +64,23 @@
         margin-right: 1em;
         /* color: #1abc9c; */
     }
-    #welcomeMessage:hover{
+
+    #welcomeMessage:hover {
         color: #4c96d7;
     }
-    #logout{
+
+    #logout {
         color: #3a3a3a;
         font-family: 'Gemunu Libre', sans-serif;
         font-size: large;
         font-weight: 900;
         margin-right: 1em;
     }
-    #logout:hover{
+
+    #logout:hover {
         color: crimson;
     }
+
     nav {
         background-color: #3a3a3a;
     }
@@ -268,7 +286,8 @@
         margin-top: 0.5em;
     }
 
-    #reg, .reg {
+    #reg,
+    .reg {
         background-color: #4c96d7;
         color: #3a3a3a;
         font-family: 'Orbitron', sans-serif;
@@ -280,7 +299,8 @@
         box-sizing: content-box;
     }
 
-    #reg:hover, .reg:hover {
+    #reg:hover,
+    .reg:hover {
         background-color: #3a3a3a;
         color: #ffffff;
         border: #4c96d7 2px solid;
@@ -394,69 +414,85 @@
     #invThumbnail {
         color: #3a3a3a;
     }
-    .hint{
+
+    .hint {
         color: #4c96d7;
         font-family: 'Gemunu Libre', sans-serif;
     }
 
-    input:required:invalid, input:focus:invalid{
-        background-color: #ffe2e3 ;
+    input:required:invalid,
+    input:focus:invalid {
+        background-color: #ffe2e3;
     }
 
     input:focus:valid {
         background-color: lightskyblue;
         color: #3a3a3a;
     }
-    textarea:required:invalid, textarea:focus:invalid{
-        background-color: #ffe2e3 ;
+
+    textarea:required:invalid,
+    textarea:focus:invalid {
+        background-color: #ffe2e3;
     }
-    textarea:focus:valid{
+
+    textarea:focus:valid {
         background-color: lightskyblue;
         color: #3a3a3a;
         font-size: large;
         font-weight: 800;
     }
-    select:invalid{
+
+    select:invalid {
         background-color: #ffe2e3;
     }
-    select:valid{
+
+    select:valid {
         background-color: #ffffff;
     }
-    .admin-view h1{
-        font-size:1.2em;
+
+    .admin-view h1 {
+        font-size: 1.2em;
     }
-    .admin-view{
+
+    .admin-view {
         margin-left: 3em;
     }
-    .admin-view li{
+
+    .admin-view li {
         list-style-type: none;
-        font-family: 'Gemunu Libre', sans-serif; 
+        font-family: 'Gemunu Libre', sans-serif;
         font-size: larger;
     }
-    .admin-link{
+
+    .admin-link {
         text-decoration: none;
         color: #3a3a3a;
-        font-family: 'Gemunu Libre', sans-serif;    
+        font-family: 'Gemunu Libre', sans-serif;
         font-size: larger;
         font-weight: 700;
     }
-    .admin-link:hover{
+
+    .admin-link:hover {
         color: #4c96d7;
     }
-    .clientUpdate{
+
+    .clientUpdate {
         margin-left: 2em;
     }
-    .clientUpdate h2{
+
+    .clientUpdate h2 {
         padding: 0.5em 0;
         font-family: 'Audiowide', cursive;
         color: #4c96d7;
     }
-    #clientupdateWarning{
+
+    #clientupdateWarning {
         margin: 0;
         color: crimson;
         font-family: 'Gemunu Libre', sans-serif;
     }
-    .admin-view h2{
+
+    .admin-view h2 {
         font-family: 'Audiowide', cursive;
         /* color: #1abc9c;
         text-shadow: #3a3a3a 1px 1px;
@@ -465,35 +501,138 @@
         font-size: 1.3em;
         font-weight: 900;
     }
-    .admin-view h2:last-of-type{
+
+    .admin-view h2:last-of-type {
         margin-top: 1em;
     }
-    .veh-man-update{
+
+    .veh-man-update {
         text-align: center;
         margin-top: 1em;
         font-family: 'Gemunu Libre', sans-serif;
         font-size: 1.2em;
         font-weight: 700;
     }
-    .veh-man-updateH2{
+
+    .veh-man-updateH2 {
         font-size: 1.3em;
     }
-    #inventoryDisplay{
+
+    #inventoryDisplay {
         margin: auto;
         margin-top: 1em;
         font-family: 'Gemunu Libre', sans-serif;
         font-size: 1.3em;
         color: #3a3a3a;
         font-weight: 800;
-        color:#1abc9c;
+        color: #1abc9c;
     }
-    #invD{
+
+    #invD {
         text-align: left;
         color: #3a3a3a;
     }
-    #invDbody{
+
+    #invDbody {
         margin-left: 1em;
     }
-    #invDbody:hover{
+
+    #invDbody:hover {
         color: crimson;
+    }
+
+
+
+    #inv-display {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #classificationPageHead {
+        margin-left: 1em;
+    }
+
+    #inv-display li {
+        margin-bottom: .5em;
+        border: 3px #ccc solid;
+        list-style-type: none;
+        flex: 1 1 auto;
+    }
+
+    #inv-display h2,
+    span {
+        margin-left: .5em;
+        font-family: 'Gemunu Libre', sans-serif;
+        color: #3a3a3a;
+    }
+
+    #inv-display li img {
+        max-width: 100%;
+    }
+
+
+
+
+
+
+    #vehicleSpecialInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #invSpecHead {
+        font-family: 'Audiowide', cursive;
+        color: #3a3a3a;
+        font-size: 1.3em;
+        margin: 0 0.5em;
+    }
+
+    #vehicleSpecialInfo img {
+        width: 100%;
+    }
+
+    #invPrice {
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: x-large;
+        font-weight: 900;
+        margin: 0.5em 1em;
+        color: #4c96d7;
+    }
+
+    #invPrice::before {
+        content: 'Price: $';
+        color: #3a3a3a;
+    }
+
+    #vehicleSpecialTextBlock {
+        margin-top: 1.2em;
+        text-align: left;
+    }
+
+    #vehicleSpecialTextBlock h2 {
+        font-family: 'Audiowide', cursive;
+        color: #3a3a3a;
+        margin-left: 0.5em;
+        font-size: 1.2em;
+    }
+
+    #vehicleSpecialTextBlock p {
+        padding: .5em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+    }
+
+    #vehicleSpecialTextBlock p:nth-child(2n) {
+        background-color: #e8e8e8;
+    }
+
+    #vehicleSpecialTextBlock p:nth-child(3)::before {
+        content: 'Color: ';
+    }
+
+    #vehicleSpecialTextBlock p:nth-child(4)::before {
+        content: 'In Stock: ';
     }

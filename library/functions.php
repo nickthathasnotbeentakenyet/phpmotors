@@ -47,15 +47,13 @@ $carclassification = getClassifications();
 function getNavigationBar($carclassification)
 {
    $navList = '<ul>';
-   $navList .= "<li><a href='/phpmotors/index.php' title='View the PHP Motors home page'>Home</a></li>";
+   $navList .= "<li><a href='/phpmotors/' title='View the PHP Motors home page'>Home</a></li>";
    foreach ($carclassification as $classification) {
-      $navList .= "<li><a href='/phpmotors/index.php?action=" . urlencode($classification['classificationName']) . "' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
+      $navList .= "<li><a href='/phpmotors/vehicles/?action=classification&classificationName=" . urlencode($classification['classificationName']) . "' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
    }
    $navList .= '</ul>';
    return $navList;
 }
-
-//  week9 -----------------------------------------------
 // Build the classifications select list 
 function buildClassificationList($classifications){ 
    $classificationList = '<select name="classificationId" id="classificationList">'; 
@@ -66,4 +64,39 @@ function buildClassificationList($classifications){
    $classificationList .= '</select>'; 
    return $classificationList; 
   }
-// week9-end --------------------------------------------
+
+// build a display of vehicles within an unordered list.
+function buildVehiclesDisplay($vehicles){
+   $dv = '<ul id="inv-display">';
+   foreach ($vehicles as $vehicle) {
+    $dv .= '<li>';
+    $dv .= "<a href='/phpmotors/vehicles/?action=vehicleInfoPage&invId=" . urlencode($vehicle['invId']) . "'> <img src='$vehicle[invImage]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'> ";
+    $dv .= '<hr class="hiddenEl">';
+    $dv .= "<h2>$vehicle[invMake] $vehicle[invModel]</h2>";
+    $dv .= "<span>$vehicle[invPrice]</span></a>";
+    $dv .= '</li>';
+   }
+   $dv .= '</ul>';
+   return $dv;
+  }
+//  build a display of a specific vehicle
+function buildVehicleSpecInfo($vehicleInfo){
+   $dv = "<div id='vehicleSpecialInfo'>";
+    foreach ($vehicleInfo as $vehicle) {
+      $dv .= "<div>";
+      $dv .= "<h1 id='invSpecHead'>$vehicle[invMake] $vehicle[invModel]</h1>";
+      $dv .= "<img src='$vehicle[invImage]' alt='Image of $vehicle[invMake] $vehicle[invModel] on phpmotors.com'>";
+      $dv .= "<p id='invPrice'> ";
+      $dv .= number_format(floatval("$vehicle[invPrice]"),0,'.',', ');   
+      $dv .= "</p>";  
+      $dv .= "</div>";
+      $dv .= "<div id='vehicleSpecialTextBlock'>";
+      $dv .= "<h2>$vehicle[invMake] $vehicle[invModel] Details</h2>";
+      $dv .= "<p>$vehicle[invDescription]</p>";
+      $dv .= "<p>$vehicle[invColor]</p>";
+      $dv .= "<p>$vehicle[invStock]</p>";
+      $dv .= "</div>";
+    }
+    $dv .= '</div>';
+   return $dv;
+  }

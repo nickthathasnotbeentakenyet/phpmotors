@@ -19,7 +19,7 @@
 
     nav li a {
         padding: 0.9em 0.5em;
-        font-size: large;
+        font-size: 1.1em;
     }
 
     nav a:hover {
@@ -181,14 +181,183 @@
         width: 14em;
         font-size: large;
     }
-    .hint{
+
+    .hint {
         font-size: larger;
         font-weight: 700;
     }
-    .hright{
+
+    .hright {
         margin-left: 60%;
     }
-    .admin-view h1{
+
+    .admin-view h1 {
         font-size: larger;
+    }
+
+    /* For vehicle display in classification view */
+    #inv-display {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+
+    #inv-display h2 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    #inv-display li {
+        max-width: 200px;
+        flex: 1 0 auto;
+        text-align: center;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* margin: 0.5em auto; */
+        margin: 1em;
+        border-radius: 15px;
+        background-color: #3a3a3a;
+        box-shadow: #8d8d8d 5px 5px 8px;
+    }
+
+    #inv-display li img {
+        width: max-content;
+        height: 125px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    #inv-display li:hover {
+        animation: shake 0.5s;
+        /* animation-iteration-count: infinite;  */
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
+    #inv-display div {
+        width: 100%;
+    }
+
+    #classificationPageHead {
+        margin: 0 1.5em;
+        padding-bottom: 0;
+        text-align: left;
+        width: fit-content;
+        background:
+            linear-gradient(to right, lightgray, darkgray, gray, #3a3a3a) var(--p, 0) 100% /var(--d, 0) 2px no-repeat;
+        transition: 0.4s, background-position 0s 0.3s;
+    }
+
+    #classificationPageHead:hover {
+        --d: 100%;
+        --p: 100%
+    }
+
+    #inv-display h2,
+    span {
+        font-size: 1.1em;
+        color: white
+    }
+
+
+
+
+    #vehicleSpecialInfo {
+        flex-direction: row;
+        margin: 0 1em;
+    }
+
+    #invSpecHead {
+        font-size: 1.7em;
+    }
+
+    #vehicleSpecialInfo img {
+        border: #ccc 3px solid;
+        border-radius: 10px;
+        box-shadow: #8d8d8d 5px 5px 10px;
+        width: 40rem;
+    }
+
+    #vehicleSpecialTextBlock {
+        margin-top: 1.8em;
+        margin-left: 2em;
+    }
+
+    #vehicleSpecialTextBlock h2 {
+        margin: 0 0 0.5em 1em;
+        width: fit-content;
+        background:
+            linear-gradient(to right, lightgray, darkgray, gray, #3a3a3a) var(--p, 0) 100% /var(--d, 0) 3px no-repeat;
+        transition: 0.4s, background-position 0s 0.3s;
+    }
+
+    #vehicleSpecialTextBlock h2:hover {
+        --d: 100%;
+        --p: 100%;
+    }
+
+
+    #vehicleSpecialTextBlock p {
+        padding: 0.5em 1em;
+        border-radius: 10px;
+    }
+
+    .hiddenEl {
+        display: none;
+    }
+
+    #vehicleSpecialTextBlock p:nth-child(3) {
+        background:
+            linear-gradient(-45deg, transparent calc(100%/3), lightgray, darkgray, gray, transparent calc(200%/3)) bottom right/350% 100% no-repeat;
+        transition: 0.5s linear;
+
+    }
+
+    #vehicleSpecialTextBlock p:nth-child(3):hover {
+        background-position: bottom left;
     }
 }
