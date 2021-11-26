@@ -569,7 +569,7 @@
     }
 
     #inv-display li img {
-        max-width: 100%;
+        width: 100%;
     }
 
 
@@ -635,4 +635,216 @@
 
     #vehicleSpecialTextBlock p:nth-child(4)::before {
         content: 'In Stock: ';
+    }
+
+    .imageUploadView {
+        margin: 0 2em;
+    }
+
+    .imageUploadView h1,
+    h2 {
+        font-family: 'Audiowide', cursive;
+        color: #3a3a3a;
+    }
+
+    .imageUploadView h2 {
+        color: #1B5583;
+    }
+
+    .imageUploadView h2:first-of-type {
+        margin-bottom: .5em;
+        color: teal;
+    }
+
+    .imageUploadView h1 {
+        font-size: 1.8em;
+    }
+
+    .imageUploadView p {
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: 1.2em;
+    }
+
+    .imageUploadSelector {
+        font-size: large;
+        margin: 0 0 .5em .5em;
+        box-shadow: 2px 2px 2px #3a3a3a;
+        border-radius: 5px;
+    }
+
+    #TealColor {
+        color: teal;
+    }
+
+    .imageUploadView form label {
+        color: #3a3a3a;
+        font-size: 1.3em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-weight: 600;
+    }
+
+    .imageUploadView form input {
+        padding: 0.2em 0.5em;
+    }
+
+    .imageUploadView fieldset {
+        border: none;
+    }
+
+    .imageUploadView hr {
+        margin: 1em 0;
+    }
+
+    /* radio button toggle */
+    .form_toggle {
+        overflow: hidden;
+    }
+
+    .form_toggle-item {
+        display: inline-block;
+    }
+
+    .form_toggle-item input[type=radio] {
+        display: none;
+    }
+
+    .form_toggle-item label {
+        display: inline-block;
+        padding: 0 10px;
+        border: 2px solid #999;
+        cursor: pointer;
+        user-select: none;
+        box-shadow: 2px 4px 2px #3a3a3a;
+    }
+
+    .form_toggle .item-1 label {
+        border-radius: 6px 0 0 6px;
+        color: #3a3a3a;
+    }
+
+    .form_toggle .item-2 label {
+        border-radius: 0 6px 6px 0;
+        color: #3a3a3a;
+    }
+
+    /* Checked */
+    .form_toggle .item-1 input[type=radio]:checked+label {
+        background-color: teal;
+        color: white;
+        font-size: x-large;
+        border: none;
+    }
+
+    .form_toggle .item-2 input[type=radio]:checked+label {
+        background-color: crimson;
+        color: white;
+        font-size: x-large;
+        border: none;
+    }
+
+    .failure {
+        font-size: large;
+        color: crimson;
+        margin-bottom: 1em;
+    }
+
+    .success {
+        font-size: large;
+        color: #1abc9c;
+        margin-bottom: 1em;
+    }
+
+    #uploadImage {
+        background: teal;
+        cursor: pointer;
+        color: white;
+        padding: .2em .3em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: x-large;
+        border: 1px solid grey;
+        box-shadow: 2px 2px 2px #3a3a3a;
+        border-radius: 5px;
+        margin-top: .5em;
+    }
+
+    input[type=file] {
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+    }
+
+    input[type=file]:focus:valid {
+        background-color: white;
+    }
+    #image-display{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #image-display img{
+        max-width: 100%;
+        margin-top: 1.5em;
+    }
+    #image-display a {
+        color: #1B5583
+    }
+
+    #image-display li {
+        list-style-type: none;
+    }
+
+    input[type=file] {
+        margin-top: .5em;
+        width: 20em;
+        background-color: cadetblue;
+        border-radius: 5px;
+    }
+
+    .imageUploadView hr {
+        height: 3px;
+        background-color: cadetblue;
+    }
+
+
+    /* get image button */
+
+    #selected {
+        text-transform: uppercase;
+        color: teal;
+        padding: 0 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin-left: .5em;
+        margin-top: .5em;
+        box-shadow: 2px 2px 2px #3a3a3a;
+    }
+
+    [value="Select File"] {
+        background: teal;
+        cursor: pointer;
+        color: white;
+        padding: 2px 5px;
+        font-family: Trebuchet MS;
+        font-size: large;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #3a3a3a;
+        margin-top: .5em;
+    }
+
+    [value=getFile]:hover {
+        background: #0aa;
+    }
+    .thumbs{
+        flex-direction: column;
+    }
+    .thumbs img{
+        max-width: 50%;
+        height: 150px;
+    }
+    #thumbsH2{
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: 1.3em;
+        margin: .5em .5em;
+    }
+    #thumbsHiddenMobile{
+        display: none;
     }

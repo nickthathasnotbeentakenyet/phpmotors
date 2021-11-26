@@ -16,6 +16,8 @@ require_once '../model/main-model.php';
 require_once '../model/vehicles-model.php';
 // Get the functions library
 require_once '../library/functions.php';
+// Get the uploads model
+require_once '../model/uploads-model.php';
 
 // Get the array of classifications
 $classifications = getClassifications();
@@ -175,11 +177,14 @@ switch ($action) {
   case 'vehicleInfoPage':
     $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
     $vehicleInfo = getSpecificVehicleInfo($invId);
-
+    $thumbnailImages = getThumbnailImage($invId);
     if (!count($vehicleInfo)) {
       $message = "<p class='notice'>Sorry, no items found.</p>";
     } else {
       $vehicleDisplay = buildVehicleSpecInfo($vehicleInfo);
+    }
+    if (count($thumbnailImages)){
+      $thumbsDisplay= buildVehicleSpecInfoThumbnailImages($thumbnailImages);
     }
     include '../view/vehicle-detail.php';
     break;

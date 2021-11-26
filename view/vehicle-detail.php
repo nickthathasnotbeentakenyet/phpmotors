@@ -34,9 +34,18 @@
             echo $message;
         }
         ?>
+        <div id="detailed-container">
+         <?php if (isset($thumbsDisplay)){
+            echo '<div id="thumbsHiddenMobile">'; echo $thumbsDisplay; echo '</div>';
+        }?>
         <?php if (isset($vehicleDisplay)) {
             echo $vehicleDisplay;
         } ?>
+        </div>
+        <?php if (isset($thumbsDisplay)){
+            echo "<h2 id='thumbsH2'>Supplemental pictures</h2>";
+            echo "<div id='thumbsHiddenDesktop'>"; echo $thumbsDisplay; echo "</div>";
+        }?>
     </main>
     <footer id="page-footer">
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>
