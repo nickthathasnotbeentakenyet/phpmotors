@@ -637,6 +637,10 @@
         content: 'In Stock: ';
     }
 
+    #vehicleSpecialTextBlock p:nth-child(5) a {
+        display: none;
+    }
+
     .imageUploadView {
         margin: 0 2em;
     }
@@ -775,14 +779,17 @@
     input[type=file]:focus:valid {
         background-color: white;
     }
-    #image-display{
+
+    #image-display {
         display: grid;
         grid-template-columns: 1fr;
     }
-    #image-display img{
+
+    #image-display img {
         max-width: 100%;
         margin-top: 1.5em;
     }
+
     #image-display a {
         color: #1B5583
     }
@@ -833,18 +840,220 @@
     [value=getFile]:hover {
         background: #0aa;
     }
-    .thumbs{
+
+    .thumbs {
         flex-direction: column;
     }
-    .thumbs img{
+
+    .thumbs img {
         max-width: 50%;
         height: 150px;
     }
-    #thumbsH2{
+
+    #thumbsH2 {
         font-family: 'Gemunu Libre', sans-serif;
         font-size: 1.3em;
         margin: .5em .5em;
     }
-    #thumbsHiddenMobile{
+
+    #thumbsHiddenMobile {
         display: none;
+    }
+
+    details[open] {
+        animation: spoiler 3s;
+    }
+
+    @keyframes spoiler {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .review {
+        margin-left: .5em;
+    }
+
+    .review h2 {
+        font-family: 'Audiowide', cursive;
+        color: #3a3a3a;
+        font-size: 1.2em;
+    }
+
+    #noreviews {
+        color: crimson;
+        font-size: large;
+    }
+
+    #reviewLogin {
+        margin-top: .5em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+    }
+
+    #reviewLogin a {
+        color: #4c96d7;
+        padding-bottom: .5em;
+    }
+
+    #reviewLogin a:hover {
+        color: #1abc9c;
+    }
+
+    .updown {
+        content: url(/phpmotors/images/site/top.png);
+        background-color: unset;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .updown:hover {
+        animation: radial-pulse 1.2s infinite;
+    }
+
+    @keyframes radial-pulse {
+        0% {
+            box-shadow: 0 0 0 0px #4c96d7;
+        }
+
+        100% {
+            box-shadow: 0 0 0 20px white;
+        }
+    }
+
+    .reviewsInfo p {
+        margin-right: .5em;
+        background-color: #63717f;
+        padding: .2em 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .reviewsInfo p:nth-of-type(2n) {
+        padding: .5em 1em;
+        background-color: lightgray;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .reviewsScreenName {
+        color: white;
+    }
+
+    .reviewsDate {
+        color: lightgoldenrodyellow;
+    }
+
+    .review h3 {
+        margin-bottom: .5em;
+        color: #3a3a3a;
+        font-size: 1em;
+        font-family: 'Audiowide', cursive;
+    }
+
+    .review-form label {
+        color: #3a3a3a;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .review-form input:first-of-type {
+        padding: .5em;
+        font-family: 'Gemunu Libre', sans-serif;
+        font-size: large;
+        font-weight: 900;
+        margin-bottom: .5em;
+        background-color: #e8e8e8;
+        border-radius: 5px;
+        border: 2px solid #4c96d7;
+    }
+
+    .review-form #reviewText {
+        background-color: #e8e8e8;
+        border-radius: 5px;
+        border: 2px solid #4c96d7;
+        width: 80%;
+        height: 8em;
+        padding: .3em;
+        font-size: large;
+    }
+
+    .reviewedDate {
+        color: darkgoldenrod;
+    }
+
+    #reviewText {
+        border-radius: 5px;
+        border: 2px solid #4c96d7;
+        padding: .3em;
+        width: 90%;
+        height: 8em;
+        font-size: large;
+    }
+
+    .flexy {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flexy a {
+        margin-right: 2em;
+    }
+
+    .flexyRight {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flexyRight .updown {
+        margin-right: 2em;
+    }
+
+    #review-submit {
+        background-color: #4c96d7;
+        color: #3a3a3a;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 0.3em 0.7em;
+        margin-top: 0.5em;
+        border: #3a3a3a 2px solid;
+    }
+
+    #review-submit:hover {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        border: #4c96d7 2px solid;
+    }
+
+    .reviewUpdLink,
+    .reviewDelLink {
+        margin-left: 1em;
+    }
+
+    .reviewUpdLink:hover {
+        color: goldenrod;
+    }
+
+    .reviewDelLink:hover {
+        color: crimson;
+    }
+
+    .gridview {
+        display: grid;
+    }
+
+    .adminVLink {
+        text-decoration: none;
+        color: #3a3a3a;
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+
+    .adminVLink:hover {
+        color: coral;
     }

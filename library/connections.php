@@ -29,4 +29,3 @@ exit;
 }
 // * This is for test only purposes *
 // phpmotorsConnect()
-?>

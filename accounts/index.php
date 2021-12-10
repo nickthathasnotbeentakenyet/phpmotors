@@ -17,6 +17,7 @@ require_once '../model/main-model.php';
 require_once '../model/accounts-model.php';
 // Get the functions library
 require_once '../library/functions.php';
+require_once '../model/reviews-model.php';
 
 // Get the array of classifications
 $classifications = getClassifications();
@@ -118,6 +119,9 @@ switch ($action) {
     // Store the array into the session
     $_SESSION['clientData'] = $clientData;
     // Send them to the admin view
+    $clientId = $_SESSION['clientData']['clientId'];
+    $accountReviews = getAccountReviews($clientId);
+    $reviewsDisplay = buildAccountReviewsDisplay($accountReviews);
     include '../view/admin.php';
     exit;
     // update account information procedure
@@ -198,7 +202,11 @@ switch ($action) {
     include '../view/register.php';
     break;
   case 'admin':
+    $clientId = $_SESSION['clientData']['clientId'];
+    $accountReviews = getAccountReviews($clientId);
+    $reviewsDisplay = buildAccountReviewsDisplay($accountReviews);
     include '../view/admin.php';
+    unset($_SESSION['message']);
     break;
   case 'logout':
     unset($_SESSION["clientData"]);

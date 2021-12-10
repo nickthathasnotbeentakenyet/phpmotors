@@ -58,10 +58,8 @@ elseif(isset($invMake) && isset($invModel)) {
                 <textarea name="invDescription" id="invDescription" readonly ><?php if(isset($invDescription)){echo $invDescription;} elseif(isset($invInfo['invDescription'])) {echo $invInfo['invDescription']; } ?></textarea><br>
                 <input type="submit" name="submit" id="addVehicle" value="Delete Vehicle">
                 <input type="hidden" name="action" value="deleteVehicle">
-                <!-- week9-2 ---------------------------------------------- -->
                 <input type="hidden" name="invId" value="<?php if(isset($invInfo['invId'])){ echo $invInfo['invId'];} 
                 elseif(isset($invId)){ echo $invId; } ?>">
-                <!-- week9-2 ---------------------------------------------- -->
             </form>
         </div>
     </main>

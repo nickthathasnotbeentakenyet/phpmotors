@@ -18,6 +18,7 @@ require_once '../model/vehicles-model.php';
 require_once '../library/functions.php';
 // Get the uploads model
 require_once '../model/uploads-model.php';
+require_once '../model/reviews-model.php';
 
 // Get the array of classifications
 $classifications = getClassifications();
@@ -178,6 +179,14 @@ switch ($action) {
     $invId = filter_input(INPUT_GET, 'invId', FILTER_SANITIZE_NUMBER_INT);
     $vehicleInfo = getSpecificVehicleInfo($invId);
     $thumbnailImages = getThumbnailImage($invId);
+    $reviews = getAllReviews($invId);
+    
+    if (!count($reviews)){
+      $msgNoReviews = '<p id="noreviews">No reviews found for this vehicle.<br> Want to be first?</p>';
+    }
+    else {
+      $displayReviews = buildReviewsDisplay($reviews);
+    }
     if (!count($vehicleInfo)) {
       $message = "<p class='notice'>Sorry, no items found.</p>";
     } else {

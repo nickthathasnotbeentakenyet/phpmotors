@@ -1,6 +1,7 @@
 <?php 
 if(!$_SESSION['loggedin']){
     header('Location: /phpmotors/');
+    exit;
    }
 ?><!DOCTYPE html>
 <html lang="en-us">
@@ -8,7 +9,7 @@ if(!$_SESSION['loggedin']){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | PHP Motors</title>
+    <title>Delete Review | PHP Motors</title>
     <link rel="stylesheet" href="/phpmotors/css/small.css" type="text/css">
     <link rel="stylesheet" href="/phpmotors/css/large.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,30 +32,24 @@ if(!$_SESSION['loggedin']){
     <nav id="page_nav">
         <?php echo getNavigationBar($carclassification); ?>
     </nav>
-    <main class="admin-view">
-        <h1>Logged in as <?php echo $_SESSION['clientData']['clientFirstname']; echo" "; echo $_SESSION['clientData']['clientLastname']; ?></h1>
-        <?php if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
-           } ?>
-        <ul>
-            <li>First name: <?php echo $_SESSION['clientData']['clientFirstname']; ?></li>
-            <li>Last name: <?php echo $_SESSION['clientData']['clientLastname']; ?></li>
-            <li>Email: <?php echo $_SESSION['clientData']['clientEmail']; ?></li>
-        </ul>
-        <br>
-        <h2>Account Management</h2>
-        <a class="admin-link" href="/phpmotors/accounts/?action=updateAccount">Update account information</a>
-        <br>
-        <?php if($_SESSION['clientData']['clientLevel'] > 1)
-        {echo '<h2>Inventory Management</h2>'; echo '<p>Use the following link to manage inventory</p>'; echo '<a class="admin-link" href="/phpmotors/vehicles/">Manage vehicles</a>'; }?>
-        <h2>Reviews Management</h2>
-        <?php 
-        if(isset($reviewsDisplay)){
-            echo "<details><summary>List of reviews</summary>"; 
-            echo $reviewsDisplay; 
-            echo "</details>";
-        }
-        ?> 
+    <main>
+        <h1 class="vehicleManHeading">Delete Review</h1>
+        <p id="emptyAddClass">Are you sure you want to delete? This action is permanent</p>
+        <?php
+            if (isset($message)) {
+            echo $message;
+            }
+        ?>
+        <div class="vehicleMan">
+            <form action="/phpmotors/reviews/index.php" method="post" class="addClassification"> 
+                <label for="reviewText">Review Text</label><br>
+                <textarea name="reviewText" id="reviewText" readonly ><?php if(isset($displaySpecReview)){echo $displaySpecReview;} ?></textarea><br>
+                <input type="submit" name="submit" id="addVehicle" value="Delete Review">
+                <input type="hidden" name="action" value="deleteReview">
+                <input type="hidden" name="reviewId" value="<?php if(isset($specReview['reviewId'])){ echo $specReview['reviewId'];} 
+                elseif(isset($reviewId)){ echo $reviewId; } ?>">
+            </form>
+        </div>
     </main>
     <footer id="page-footer">
         <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/footer.php'; ?>

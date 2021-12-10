@@ -98,13 +98,15 @@ function buildVehicleSpecInfo($vehicleInfo)
       $dv .= "<p>$vehicle[invDescription]</p>";
       $dv .= "<p>$vehicle[invColor]</p>";
       $dv .= "<p>$vehicle[invStock]</p>";
+      $dv .= "<p><a href='#review'>Vehicle reviews</a></p>";
       $dv .= "</div>";
    }
    $dv .= '</div>';
    return $dv;
 }
 //  build a display of thumbnail pictures for a  specific vehicle
-function buildVehicleSpecInfoThumbnailImages($thumbnailImages){
+function buildVehicleSpecInfoThumbnailImages($thumbnailImages)
+{
    $dv = "<div class='thumbs'>";
    foreach ($thumbnailImages as $thumbs) {
       $dv .= "<img src='$thumbs[imgPath]' alt='Image of $thumbs[imgName] on phpmotors.com'>";
@@ -276,3 +278,53 @@ function resizeImage($old_image_path, $new_image_path, $max_width, $max_height)
    // Free any memory associated with the old image
    imagedestroy($old_image);
 } // ends resizeImage function
+
+
+// ***************** reviews functions *************
+
+// Build reviews for a specific vehicle
+function buildReviewsDisplay($reviews)
+{
+   $r = '<div class="reviewsInfo">';
+   foreach ($reviews as $review) {
+      $fName = ($review['clientFirstname']);
+      $lName = ($review['clientLastname']);
+      $date = date($review['reviewDate']);
+      $humanDate = date('l\, jS \of F Y h:i A', strtotime($date));
+      $r .= "<div>";
+      $r .= "<p><span class='reviewsScreenName'>$fName[0]$lName</span><span class='reviewsDate'>wrote on $humanDate</span></p>";
+      $r .= "<p class='revTxt'>$review[reviewText]</p>";
+      $r .= "<br>";
+      $r .= "</div>";
+   }
+   $r .= '</div>';
+   return $r;
+}
+
+// Build reviews for a specific user account
+function buildAccountReviewsDisplay($accountReviews)
+{
+   $r = '<div>';
+   foreach ($accountReviews as $review) {
+      $date = date($review['reviewDate']);
+      $r .= "<ul>";
+      $humanDate = date('F j, Y \a\t h:i A', strtotime($date));
+      $r .= "<li class='gridview'><a class='adminVLink' href='/phpmotors/vehicles?action=vehicleInfoPage&invId=$review[invId]'>$review[invMake] $review[invModel]</a><span class='reviewedDate'>[Reviewed on $humanDate]</span>
+      <a class='reviewUpdLink' href='/phpmotors/reviews?action=updateView&reviewId=$review[reviewId]' title='Click to modify'>Update</a>
+      <a class='reviewDelLink' href='/phpmotors/reviews?action=deleteView&reviewId=$review[reviewId]' title='Click to delete'>Delete</a></li>";
+      $r .= "</ul>";
+      $r .= "<br>";
+   }
+   $r .= '</div>';
+   return $r;
+}
+
+
+// build specific review 
+function buildSpecReviewDisplay($specReview)
+{
+   foreach ($specReview as $review) {
+      $s = "$review[reviewText]";
+   }
+   return $s;
+}
