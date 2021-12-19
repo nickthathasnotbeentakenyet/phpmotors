@@ -5,7 +5,7 @@
 
 function phpmotorsConnect()
 {
-$server = 'mysql';
+$server = 'localhost';
 $dbname= 'phpmotors';
 $username = 'iClient';
 $password = 'bE_-@Ztm]hB!2Kac';
@@ -28,4 +28,4 @@ exit;
 }
 }
 // * This is for test only purposes *
-// phpmotorsConnect()
+// phpmotorsConnect();
