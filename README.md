@@ -1,4 +1,3 @@
 # CSE 340 
 
-# PHPMotors
-### PHP and MySQL.
+### PHPMotors: PHP and MySQL.
